@@ -1,7 +1,9 @@
 # Build stage
 FROM golang:1.23.4-alpine AS builder
 
-ENV GOPROXY=https://goproxy.cn,direct
+ENV GOPROXY=https://goproxy.io,direct
+
+# ENV GOPROXY=https://goproxy.cn,direct
 ENV TZ=Asia/Shanghai
 
 RUN apk update --no-cache && apk add --no-cache tzdata
