@@ -1,4 +1,4 @@
-name: gomodd
+name: gomodd:1.23.4
 
 on:
   push:
