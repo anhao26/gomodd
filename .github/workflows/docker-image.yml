@@ -15,7 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Log in to Docker Hub
-      # docker login --username=287904493@qq.com registry.cn-hangzhou.aliyuncs.com
       run: echo "${{ secrets.DOCKER_ALI_PASSWORD }}" | docker login --username="${{ secrets.DOCKER_ALI_USERNAME }}" registry.cn-hangzhou.aliyuncs.com --password-stdin
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/lawyer01/gomodd::1.23.4
